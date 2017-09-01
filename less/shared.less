@@ -1,0 +1,193 @@
+html {
+  font-family: Zilla Slab, sans-serif;
+  font-weight: 300;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 28px;
+  }
+}
+
+* { box-sizing: border-box }
+
+.page {
+  background: #FFFFFF;
+}
+
+.question {
+  font-size: 1.2rem;
+  font-family: 'Open Sans';
+  margin-top: 2rem;
+}
+
+p {
+  color: #000000;
+  font-size: 1.12rem;
+  line-height: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Open Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  & + h2 {
+    margin-top: -0.5em;
+  }
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/assets/fonts/opensans-light.woff2') format('woff2'),
+       url('/assets/fonts/opensans-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/assets/fonts/opensans-regular.woff2') format('woff2'),
+       url('/assets/fonts/opensans-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/assets/fonts/ZillaSlab-Light.woff2') format('woff2'),
+       url('/assets/fonts/ZillaSlab-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/assets/fonts/ZillaSlab-Regular.woff2') format('woff2'),
+       url('/assets/fonts/ZillaSlab-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/assets/fonts/ZillaSlab-RegularItalic.woff2') format('woff2'),
+       url('/assets/fonts/ZillaSlab-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/assets/fonts/ZillaSlab-Medium.woff2') format('woff2'),
+       url('/assets/fonts/ZillaSlab-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Babel Stone Flags';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/assets/fonts/BabelStoneFlags.woff') format('woff');
+}
+
+.nav-offset {
+  height: 65px;
+  margin-top: -65px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.error-message {
+  color: #FF0000;
+  font-style: italic;
+}
+
+p.error-message {
+  font-family: Fira Sans Condensed, sans-serif;
+  margin-top: 0;
+  font-size: .75rem;
+}
+
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button, .button-styling {
+  height: 1.8rem;
+  margin: 0 auto;
+  padding: 0 60px;
+  cursor: pointer;
+  background: #000000;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.06rem;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: none;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  text-align: center;
+
+  &.submitting {
+    outline: none;
+    user-select: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      animation: spin 1s linear infinite; /* CSS3 */
+      margin-top: -15px;
+      margin-left: -15px;
+      height: 20px;
+      width: 20px;
+      border: 5px solid #FFFFFF;
+      border-right: 5px solid #000000;
+      border-radius: 50%;
+    }
+  }
+}
+
+section {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.share-progress-holder {
+  display: none;
+}
+
+@keyframes spin { /* CSS3 */
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
